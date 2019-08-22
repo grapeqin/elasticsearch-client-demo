@@ -29,7 +29,7 @@ public class ElasticSearchClientTest {
   @BeforeClass
   public static void setup() throws KeyStoreException {
     restClient = RestClient
-			.builder(new HttpHost("elk.ops.yunnex.com", 9200, "http"))
+			.builder(new HttpHost("localhost", 9200, "http"))
 			.setRequestConfigCallback(new RequestConfigCallback() {
 				@Override
 				public Builder customizeRequestConfig(Builder requestConfigBuilder) {
